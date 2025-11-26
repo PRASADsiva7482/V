@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.v.app-mergeDebugResources-56:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/prasad/.gradle/caches/transforms-3/b6b884f8da3b63f86ab90ecfbd628b8b/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
