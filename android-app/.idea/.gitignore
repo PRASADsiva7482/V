@@ -1,3 +1,27 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+.gradle/
+.idea/  
+.lock
+.bin
+Desktop.ini
+*.class
+*.jar
+*.log
+*.out
+*.so
+*.swp
+*.tmp
+*.zip
+*.lock
+*.bin
+Desktop.ini
+*.class
+*.jar
+*.log
+*.out
+*.so
+*.swp
+*.tmp
+*.zip

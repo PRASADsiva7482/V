@@ -30,9 +30,9 @@ class AuthViewModel @Inject constructor(
         }
     }
 
-    fun signup(email: String, password: String, username: String, displayName: String) {
+    fun signup(email: String, password: String, displayName: String) {
         viewModelScope.launch {
-            repository.signup(RegisterRequest(email, password, username, displayName)).collect {
+            repository.signup(RegisterRequest(email, password, displayName)).collect {
                 _authState.value = it
             }
         }

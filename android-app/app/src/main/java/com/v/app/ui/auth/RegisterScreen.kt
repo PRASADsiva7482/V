@@ -21,7 +21,6 @@ fun RegisterScreen(
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-    var username by remember { mutableStateOf("") }
     var displayName by remember { mutableStateOf("") }
     
     val authState by viewModel.authState.collectAsState()
@@ -64,15 +63,6 @@ fun RegisterScreen(
         Spacer(modifier = Modifier.height(8.dp))
         
         OutlinedTextField(
-            value = username,
-            onValueChange = { username = it },
-            label = { Text("Username") },
-            modifier = Modifier.fillMaxWidth()
-        )
-        
-        Spacer(modifier = Modifier.height(8.dp))
-        
-        OutlinedTextField(
             value = displayName,
             onValueChange = { displayName = it },
             label = { Text("Display Name") },
@@ -92,7 +82,7 @@ fun RegisterScreen(
         Spacer(modifier = Modifier.height(16.dp))
         
         Button(
-            onClick = { viewModel.signup(email, password, username, displayName) },
+            onClick = { viewModel.signup(email, password, displayName) },
             modifier = Modifier.fillMaxWidth(),
             enabled = authState !is Resource.Loading
         ) {

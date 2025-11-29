@@ -12,6 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import com.v.app.ui.NavGraph
 import com.v.app.ui.components.BottomNavigationBar
 
 @AndroidEntryPoint
