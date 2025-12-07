@@ -1,9 +1,9 @@
 package com.v.app.user;
 
-import lombok.Data;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import lombok.Data;
 
 @Data
 public class UserDto {

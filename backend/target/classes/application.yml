@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/v_app?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: password
+    password: SIva@7482
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -14,10 +14,10 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQLDialect
-  sql:
-    init:
-      mode: always # Initialize schema.sql if needed (usually handled manually or via flyway, but for this task we can use spring.sql.init)
-      schema-locations: file:../db/schema.sql
+#  sql:
+#    init:
+#      mode: always # Initialize schema.sql if needed (usually handled manually or via flyway, but for this task we can use spring.sql.init)
+#      schema-locations: file:../db/schema.sql
 
 # JWT Configuration
 jwt:
@@ -27,5 +27,7 @@ jwt:
 
 server:
   port: 8080
+  servlet:
+    context-path=/v-app
   error:
     include-message: always

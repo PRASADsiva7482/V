@@ -29,7 +29,7 @@ object NetworkModule {
     @Singleton
     fun provideVApi(okHttpClient: OkHttpClient): VApi {
         return Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:8080/") // Emulator localhost
+            .baseUrl("http://localhost:8080/v-app") // Emulator localhost
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

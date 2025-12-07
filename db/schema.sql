@@ -147,12 +147,14 @@ CREATE TABLE notifications (
 CREATE TABLE reports (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     reporter_id BIGINT NOT NULL,
-    post_id BIGINT NOT NULL,
+    post_id BIGINT,
+    reported_user_id BIGINT,
     reason VARCHAR(255) NOT NULL,
     status VARCHAR(20) DEFAULT 'PENDING', -- PENDING, RESOLVED, DISMISSED
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (reported_user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 -- ==========================================
